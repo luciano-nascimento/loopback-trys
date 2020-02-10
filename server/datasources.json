@@ -1,0 +1,14 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory",
+    "file": "mydata.json"
+  },
+  "mymongo": {
+    "host": "localhost",
+    "port": "27017",
+    "database": "pet",
+    "name": "mymongo",
+    "connector": "mongodb"
+  }
+}

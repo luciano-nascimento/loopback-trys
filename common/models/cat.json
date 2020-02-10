@@ -1,0 +1,45 @@
+{
+    "name": "cat",
+    "base": "PersistedModel",
+    "idInjection": true,
+    "options": {
+        "validateUpsert": true
+    },
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "age": {
+            "type": "number"
+        },
+        "gender": {
+            "type": "string"
+        },
+        "breed": {
+            "type": "string"
+        },
+        "updated": {
+            "type": "date"
+        }
+    },
+    "validations": [],
+    "relations": {},
+    "acls": [{
+
+        },
+        {
+            "accessType": "*",
+            "principalType": "ROLE",
+            "principalId": "$authenticated",
+            "permission": "ALLOW"
+        }
+    ],
+    "methods": {},
+    "scopes": {
+        "calico": { "where": { "breed": "Calico" } },
+        "oldCats": {
+            "where": { "age": { "gt": 10 } }
+        },
+        "someCats": { "limit": 8 }
+    }
+}
